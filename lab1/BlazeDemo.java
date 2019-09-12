@@ -23,6 +23,7 @@ public class BlazeDemo {
 	// Global driver variables
 	// -----------------------------------
 	WebDriver driver;
+	private Object city;
 	
 
 	@Before
@@ -32,14 +33,20 @@ public class BlazeDemo {
 		driver = new ChromeDriver();
 		// 2. go to website
 		driver.get(URL_TO_TEST);
+		BlazeDemo city = new BlazeDemo();
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception 
+	{
+		
 	}
 
 	@Test
-	public void test() {
+	public void test() 
+	{
+		int a = ((Object) city).getCityCount();
+		assertEquals(0, 7);
 		fail("Not yet implemented");
 	}
 
