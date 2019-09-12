@@ -15,7 +15,10 @@ public class SnakeTest {
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception 
+	{
+		Thread.sleep(5000);
+		driver.close();
 	}
 
 	@Test

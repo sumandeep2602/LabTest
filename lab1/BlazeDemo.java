@@ -25,6 +25,8 @@ public class BlazeDemo {
 	WebDriver driver;
 	private Object city;
 	
+	flight = new BlazeDemo();
+	
 
 	@Before
 	public void setUp() throws Exception 
@@ -39,15 +41,25 @@ public class BlazeDemo {
 	@After
 	public void tearDown() throws Exception 
 	{
-		
+		Thread.sleep(5000);
+		driver.close();
 	}
 
 	@Test
 	public void test() 
 	{
+		List<WebElement> city = driver.findElements(
+				By.cssSelector("table+ul li a"));
+		System.out.println("No of cities"+size());
 		int a = ((Object) city).getCityCount();
 		assertEquals(0, 7);
-		fail("Not yet implemented");
+		
 	}
-
+ public void VirginAmericaFlight()
+ {
+	 double DepartureTime = 11.23;
+	 assertEquals(0,DepartureTime);
+	  double ArrivalTime = 1.45;
+	  assertEquals(0,ArrivalTime);
+ }
 }
